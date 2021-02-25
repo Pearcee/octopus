@@ -1,7 +1,5 @@
 import csv, json, sys
 import requests
-import numpy as np
-import pandas as pd
 import os
 from dotenv import load_dotenv
 from datetime import datetime
@@ -12,7 +10,7 @@ url_tarif = os.getenv("url_tarif")
 api_key = os.getenv("api_key")
 url_meter = os.getenv("url_meter")
 datename = datetime.now().strftime("%y%m%d")
-
+csvdir = 'CSV/'
 
 def get_api_data(url):
     response = requests.get(url, auth=(api_key, ''))
@@ -22,7 +20,7 @@ def get_api_data(url):
 
 
 def write_data_csv(dataname, filename):
-    csvfile = 'CSV/' + filename + datename + '.csv'
+    csvfile = csvdir + filename + datename + '.csv'
     # open a file for writing
     jason_data = open(csvfile, 'w', newline='')
 
@@ -40,3 +38,6 @@ def write_data_csv(dataname, filename):
 
 tarif_data = get_api_data(url_tarif)
 write_data_csv(tarif_data, "tarif")
+
+meter_data = get_api_data(url_meter)
+write_data_csv(meter_data, 'meter')
