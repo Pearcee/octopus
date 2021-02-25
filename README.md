@@ -5,8 +5,8 @@ Agile Octopus
     pip install -U python-dotenv
     start .env file with
         api_key = "sk_live_......"
-        url_tarif = "https://api.octopus.energy/v1/products/AGILE-18-02-21/electricity-tariffs/E-1R-AGILE-18-02-21-N/standard-unit-rates/"
-        url_meter = "https://api.octopus.energy/v1/electricity-meter-points/1800020668720/meters/19L3278767/consumption/"
+        url_tarif = ""
+        url_meter = ""
 
 
 python -m pip freeze > requirements.txt
