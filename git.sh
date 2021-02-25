@@ -1,9 +1,5 @@
-
-#  git config --global user.email "sjpearce@gmail.com"
-#  git config --global user.name "pearcee"
-
-comment = date +"%y.%m.%d.%T"
 git status
-git add  .
-git commit -m comment
-git push -u origin master
+git add *
+git commit -m "$1"
+git push
+
