@@ -4,6 +4,6 @@
 
 comment = date +"%y.%m.%d.%T"
 git status
-git add --all .
+git add  .
 git commit -m comment
 git push -u origin master
