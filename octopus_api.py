@@ -10,7 +10,7 @@ url_tarif = os.getenv("url_tarif")
 api_key = os.getenv("api_key")
 url_meter = os.getenv("url_meter")
 datename = datetime.now().strftime("%y%m%d")
-csvdir = 'CSV/'
+csvdir = '/www/data/octopus/'
 
 def get_api_data(url):
     response = requests.get(url, auth=(api_key, ''))
